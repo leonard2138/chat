@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#121212">
+    <title>Мессенджер</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+    <div class="container">
+        <div id="login-form" class="form-container">
+            <h1>Вход в мессенджер</h1>
+            <div class="input-group">
+                <input type="text" id="access-code" placeholder="Введите код доступа" autocomplete="off">
+                <button id="login-btn">Войти</button>
+            </div>
+            <p id="login-error" class="error-message"></p>
+        </div>
+
+        <div id="chat-container" class="hidden">
+            <div class="chat-header">
+                <h2>Чат</h2>
+                <div class="user-info">
+                    <span id="current-user"></span>
+                    <span id="other-user-status"></span>
+                </div>
+                <button id="logout-btn" class="logout-btn">Выйти</button>
+            </div>
+            <div class="messages-container" id="messages-container"></div>
+            <div class="input-area">
+                <textarea id="message-input" placeholder="Введите сообщение..."></textarea>
+                <button id="send-btn">Отправить</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
